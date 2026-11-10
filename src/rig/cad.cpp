@@ -1,7 +1,7 @@
 #include "rig/cad.h"
 
 #include "ecs/MEcs.h"
-#include "CCadBox.h"
+#include "CCadCuboid.h"
 #include "CCadCylinder.h"
 #include "CCadReferenceLine.h"
 #include "CCadReferencePlane.h"
@@ -9,11 +9,11 @@
 
 namespace rig {
 
-entt::entity makeCadBox(rigkit::MEcs& ecs, float sizeX, float sizeY, float sizeZ, bool center,
+entt::entity makeCadCuboid(rigkit::MEcs& ecs, float sizeX, float sizeY, float sizeZ, bool center,
 						const std::string& name) {
 	auto e = ecs.createEntity(name);
 	ecs.addComponent(e, rigkit::ecs::CTransform{});
-	rigkit::ecs::CCadBox box;
+	rigkit::ecs::CCadCuboid box;
 	box.sizeX = sizeX;
 	box.sizeY = sizeY;
 	box.sizeZ = sizeZ;
@@ -22,10 +22,10 @@ entt::entity makeCadBox(rigkit::MEcs& ecs, float sizeX, float sizeY, float sizeZ
 	return e;
 }
 
-entt::entity makeCadBox(float sizeX, float sizeY, float sizeZ, bool center,
+entt::entity makeCadCuboid(float sizeX, float sizeY, float sizeZ, bool center,
 						const std::string& name) {
 	auto* ecs = currentEcs();
-	return ecs ? makeCadBox(*ecs, sizeX, sizeY, sizeZ, center, name) : entt::null;
+	return ecs ? makeCadCuboid(*ecs, sizeX, sizeY, sizeZ, center, name) : entt::null;
 }
 
 entt::entity makeCadCylinder(rigkit::MEcs& ecs, float radius, float height, bool center,

@@ -1,9 +1,9 @@
 {
-  "name": "cadBox",
+  "name": "cadCuboid",
   "version": "0.1.0",
   "license": "MIT",
-  "description": "rigCadComponent example - one CCadBox",
-  "window": { "width": 800, "height": 600, "title": "rigCadComponent - cadBox" },
+  "description": "rigCadComponent example - one CCadCuboid",
+  "window": { "width": 800, "height": 600, "title": "rigCadComponent - cadCuboid" },
   "dependencies": [
     {
       "name": "rigComponent",

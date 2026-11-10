@@ -7,10 +7,10 @@ namespace rigkit {
 namespace ecs {
 
 /**
- * @brief Axis-aligned box solid. Speaks `rig.cad.cuboid`.
+ * @brief Axis-aligned cuboid solid. Speaks `rig.cad.cuboid`.
  * @details CSG source of truth; `CMesh` on the same entity is an optional bake.
  */
-struct CCadBox {
+struct CCadCuboid {
 	float sizeX = 1.f;
 	float sizeY = 1.f;
 	float sizeZ = 1.f;

@@ -4,7 +4,7 @@
 #include "core/pack/PackRegistry.h"
 #include "ecs/MEcs.h"
 #include "CCadBoolean.h"
-#include "CCadBox.h"
+#include "CCadCuboid.h"
 #include "CCadChamfer.h"
 #include "CCadCylinder.h"
 #include "CCadDimension.h"
@@ -36,7 +36,7 @@ void rigCadComponent::setup() {
 		return;
 	}
 
-	ecs->registerComponent<ecs::CCadBox>("CadBox", true);
+	ecs->registerComponent<ecs::CCadCuboid>("CadCuboid", true);
 	ecs->registerComponent<ecs::CCadCylinder>("CadCylinder", true);
 	ecs->registerComponent<ecs::CCadSphere>("CadSphere", true);
 	ecs->registerComponent<ecs::CCadExtrude>("CadExtrude", true);

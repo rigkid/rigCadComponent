@@ -9,8 +9,8 @@
 
 #include <spdlog/spdlog.h>
 
-void CadBoxApp::setup() {
-	spdlog::info("cadBox - CCadBox stock");
+void CadCuboidApp::setup() {
+	spdlog::info("cadCuboid - CCadCuboid stock");
 	m_engine->setClearColor(0.08f, 0.09f, 0.12f, 1.0f);
 
 	auto* packs = m_engine->getPackManager();
@@ -27,6 +27,6 @@ void CadBoxApp::setup() {
 	if (!ecs) {
 		return;
 	}
-	rig::makeCadBox(*ecs, 2.f, 1.5f, 1.2f, true, "stock");
-	spdlog::info("cadBox - stock entity ready");
+	rig::makeCadCuboid(*ecs, 2.f, 1.5f, 1.2f, true, "stock");
+	spdlog::info("cadCuboid - stock entity ready");
 }

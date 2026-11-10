@@ -15,7 +15,7 @@ endif()
 add_library(${PACK_NAME} STATIC
 	src/rigCadComponent.cpp
 	src/rigCadComponent.h
-	src/CCadBox.h
+	src/CCadCuboid.h
 	src/CCadCylinder.h
 	src/CCadSphere.h
 	src/CCadExtrude.h

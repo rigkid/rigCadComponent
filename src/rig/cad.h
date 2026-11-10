@@ -19,9 +19,9 @@ class MEcs;
 
 namespace rig {
 
-entt::entity makeCadBox(float sizeX, float sizeY, float sizeZ, bool center = true,
+entt::entity makeCadCuboid(float sizeX, float sizeY, float sizeZ, bool center = true,
 						const std::string& name = {});
-entt::entity makeCadBox(rigkit::MEcs& ecs, float sizeX, float sizeY, float sizeZ,
+entt::entity makeCadCuboid(rigkit::MEcs& ecs, float sizeX, float sizeY, float sizeZ,
 						bool center = true, const std::string& name = {});
 
 entt::entity makeCadCylinder(float radius, float height, bool center = true,
